@@ -8,13 +8,13 @@ import joblib
 
 @st.cache_data
 def load_dataset():
-    df = pd.read_csv('datasets/high_diamond_ranked_10min.csv')
+    df = pd.read_csv('lol_winner_prediction/datasets/high_diamond_ranked_10min.csv')
     return df
 
 
 @st.cache_data
 def load_model():
-    model = joblib.load('lol_prediction.joblib')
+    model = joblib.load('lol_winner_prediction/lol_prediction.joblib')
     return model
 
 
@@ -28,7 +28,7 @@ def main(main_page: st.delta_generator.DeltaGenerator):
     col1, col2, col3 = information_container.columns(3)
     col1.write(' ')
     col2.write("<div style='text-align: center;'><h3>League of Legends nedir?</h3></div>", unsafe_allow_html=True)
-    col2.image("lol_cover.jpg", use_column_width=True)
+    col2.image("lol_winner_prediction\lol_cover.jpg", use_column_width=True)
     col2.markdown("""
             <div>
                 <p style='font-size: 20px; font-style: italic;'>
