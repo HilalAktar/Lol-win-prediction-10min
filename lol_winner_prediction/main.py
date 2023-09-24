@@ -18,7 +18,7 @@ def load_model():
     return model
 
 
-st.set_page_config(layout='wide', page_icon='icon.png', page_title="League of Legends Project")
+st.set_page_config(layout='wide', page_icon='lol_winner_prediction/icon.png', page_title="League of Legends Project")
 st.title(":blue[League of Legends Maç Tahmin Modeli]")
 main_page, data_page, model_page = st.tabs(["Ana Sayfa", "Veri Seti", "Model"])
 
@@ -28,7 +28,7 @@ def main(main_page: st.delta_generator.DeltaGenerator):
     col1, col2, col3 = information_container.columns(3)
     col1.write(' ')
     col2.write("<div style='text-align: center;'><h3>League of Legends nedir?</h3></div>", unsafe_allow_html=True)
-    col2.image("lol_winner_prediction\lol_cover.jpg", use_column_width=True)
+    col2.image("lol_winner_prediction/lol_cover.jpg", use_column_width=True)
     col2.markdown("""
             <div>
                 <p style='font-size: 20px; font-style: italic;'>
